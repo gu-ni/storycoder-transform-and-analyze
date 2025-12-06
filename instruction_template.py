@@ -251,8 +251,9 @@ INSTRUCTION_CLARIFY = """Please transform the coding problem into a narrative st
 
 
 GEMINI_PARAPHRASE = """Paraphrase the following coding problem while keeping the meaning, constraints, input/output format, and sample cases exactly the same.
-You may rephrase the story or wording, but do not alter anything that changes the solution.
-The paraphrased problem must still produce the same answers as the original.
+You may rephrase the story or wording, but do not alter anything that could change the solution.
+The paraphrased question must still produce the same answers as the original.
+**Do not attempt to solve the problem or provide any code. Your task is only to paraphrase the question as specified.**
 Write only what is requested. The coding problem is as follows:
 
 """
@@ -315,5 +316,80 @@ Do not include any other text outside these five sections.
 
 
 ### The coding problem is as follows:
+
+"""
+
+
+INSTRUCTION_THREE_COMPONENTS_ALGORITHM_GIVEN_GENRE = """Please transform the coding problem into a narrative story using the following guidelines.
+
+### Guidelines for Narrative Conversion:
+
+You must write in the {GENRE} style.
+
+Before writing the narrative, you will review the major categories of coding test algorithms:
+   - Graph Algorithms
+   - Dynamic Programming
+   - Greedy Algorithms
+   - Sorting and Searching
+   - String Algorithms
+   - Data Structures
+   - Mathematics and Number Theory
+   - Simulation and Implementation
+
+### Output Format:
+
+You must write the output in the **exact following order** with the specified headers:
+
+- Algorithm Category: (one of the categories above)
+
+- Task Overview: Describe the background and objective of the problem in a clear, narrative-inspired manner. The selected algorithm should be introduced naturally here, with its logic explained as part of the setting or scenario.
+
+- Constraints: State input sizes, value ranges, conditions, and key operational rules. If efficiency or time limits exist, express them as natural constraints. The chosen algorithm should also shape these rules.
+
+- Example Input/Output: Reframe the examples as part of the scenario’s flow. Present them as clear, contextual situations.
+
+The narrative must include all essential parts of the original problem, ensuring no constraints, goals, or examples are omitted.
+Do not include any other text outside these four sections.
+**Do not attempt to solve the problem or provide any code. Your task is only to transform the problem statement into the narrative format as specified.**
+
+You must write the narrative in the following genre: {GENRE}
+
+
+### The coding problem is as follows:
+
+"""
+
+
+mismatch_genre = [
+    "Billboard Advertisement for a Toothbrush",
+    "Court Transcript of an Extortion Case",
+    "Radio Weather Forecast",
+    "Hospital Intake Form",
+    "Funeral Service Program",
+    "Memorial Tribute Writing",
+    "Heavy Machinery Operator License",
+    "Obituary Column",
+    "Medical Prescription Form",
+    "Model Agency Contract",
+    "Personal Information Consent Form",
+    "Insurance Claim Form",
+    "Visa Application Form",
+    "Tax Return Form",
+    "Military Service Exemption Certificate",
+    "Divorce Decree",
+    "Bank Loan Agreement",
+    "Eulogy",
+    "Gravestone Inscription",
+    "Condolence Letter",
+]
+
+
+SOT_INSTRUCTION = """You will perform two roles.
+
+Role A (Internal Reasoning Only): You are an explorer who wants to identify and collect different related and specialized subject areas to clarify the question. Your goal is to narrow down the question and provide relevant areas of knowledge and experience you have that help clarify the question. Do NOT output anything from this role. Only use the result internally.
+
+Role B (Final Output): You are an expert in narrative-based explanations for science communication. Your goal is to clarify the question in a narrative way through the interconnected information from Role A, to enable a non-expert to comprehend the question in a more coherent and contextually rich manner. Your goal is **only to clarify the question**, not answer it. Make sure to use all of these narrative techniques when clarifying the question through the interconnected information: Progressive Disclosure, Branching, Analogy, Analogical Reasoning, and Metaphor. This is the ONLY role that produces visible output.
+
+Output ONLY the result of Role B. The question is as follows:
 
 """

@@ -4,7 +4,7 @@ import time
 from google import genai
 from google.genai import types
 from google.genai.types import GenerateContentConfigDict
-from instruction_template import INSTRUCTION_THREE_COMPONENTS, INSTRUCTION_THREE_COMPONENTS_ALGORITHM
+from instruction_template import INSTRUCTION_THREE_COMPONENTS, INSTRUCTION_THREE_COMPONENTS_ALGORITHM, INSTRUCTION_THREE_COMPONENTS_ALGORITHM_GIVEN_GENRE, mismatch_genre
 
 
 # 기존 출력 파일에서 이미 처리한 ID 수집
@@ -44,20 +44,22 @@ def call_gemini(model, prompt):
 if __name__ == "__main__":
     model = genai.Client(
         vertexai=True,
-        project=os.getenv("GOOGLE_PROJECT_ID"),
-        location=os.getenv("GOOGLE_LOCATION"),
+        # project=os.getenv("GOOGLE_PROJECT_ID"),
+        project="472108490113",
+        # location=os.getenv("GOOGLE_LOCATION"),
+        location="us-central1",
     )
 
     # 내러티브 생성 횟수
     N_VARIANTS = 5  # 원하는 n값으로 변경
-    option = "search_algorithm"
+    option = "search_algorithm_mismatch"
 
     input_jsonl_path_list = [
-        ("/home/work/users/PIL_ghj/LLM/datasets/human-eval/data/HumanEval_in_lcb_format_io_filtered.jsonl", "HumanEval", f"humaneval_filtered_narrative_by_gemini_{option}.jsonl"),
-        ("/home/work/users/PIL_ghj/LLM/datasets/live-code-bench/test6.jsonl", "LiveCodeBench", f"test6_narrative_by_gemini_{option}.jsonl"),
-        # ("/home/work/users/PIL_ghj/LLM/datasets/codeforces/codeforces_in_lcb_format.jsonl", "CodeForces", f"codeforces_narrative_by_gemini_{option}.jsonl"),
+        # ("/home/work/users/PIL_ghj/LLM/datasets/human-eval/data/HumanEval_in_lcb_format_io_filtered.jsonl", "HumanEval", f"humaneval_filtered_narrative_by_gemini_{option}.jsonl"),
+        # ("/home/work/users/PIL_ghj/LLM/datasets/live-code-bench/test6.jsonl", "LiveCodeBench", f"test6_narrative_by_gemini_{option}.jsonl"),
+        ("/home/work/users/PIL_ghj/LLM/datasets/codeforces/codeforces_in_lcb_format.jsonl", "CodeForces", f"codeforces_narrative_by_gemini_{option}.jsonl"),
         # ("/home/work/users/PIL_ghj/LLM/datasets/codeforces/codeforces_mid_in_lcb_format.jsonl", "CodeForces", f"codeforces_mid_narrative_by_gemini_{option}.jsonl"),
-        # ("/home/work/users/PIL_ghj/LLM/datasets/codeforces/codeforces_challenging_in_lcb_format.jsonl", "CodeForces", f"codeforces_challenging_narrative_by_gemini_{option}.jsonl"),
+        ("/home/work/users/PIL_ghj/LLM/datasets/codeforces/codeforces_challenging_in_lcb_format.jsonl", "CodeForces", f"codeforces_challenging_narrative_by_gemini_{option}.jsonl"),
     ]
 
     base_output_dir = f"/home/work/users/PIL_ghj/LLM/datasets/gemini_{option}"
@@ -83,14 +85,19 @@ if __name__ == "__main__":
                             print(f"[Logging] Skipping already processed question_id: {qid}")
                             continue
 
-                        instruction = INSTRUCTION_THREE_COMPONENTS_ALGORITHM
+                        instruction = INSTRUCTION_THREE_COMPONENTS_ALGORITHM_GIVEN_GENRE
+                        genre_index = i % len(mismatch_genre)
+                        genre = mismatch_genre[genre_index]
+                        instruction = instruction.replace("{GENRE}", genre)
                         input_prompt = instruction + problem["question_content"]
 
                         # n번 내러티브 생성
                         narratives = []
+                        
                         for v in range(N_VARIANTS):
                             new_content = call_gemini(model, input_prompt)
                             print(f"\n[Variant {v+1}] ------------------------- Gemini Response -------------------------\n")
+                            print(f"Genre: {genre}\n")
                             print(new_content)
                             print("\n-------------------------------------------------------------------\n")
                             if new_content:
@@ -99,6 +106,7 @@ if __name__ == "__main__":
 
                         # 문제에 n개의 내러티브를 리스트로 저장
                         problem["narratives"] = narratives
+                        problem["genre"] = genre
 
                         outfile.write(json.dumps(problem, ensure_ascii=False) + "\n")
                         existing_ids.add(qid)

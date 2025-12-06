@@ -31,16 +31,18 @@ def remove_algorithm_and_genre(text: str) -> str:
 if __name__ == "__main__":
     
     # === 옵션 직접 지정 ===
-    option = "search_algorithm"  # "search" → 그대로 유지, "search_algorithm" → 알고리즘/장르 제거
+    option = "sot_template"  # "search" → 그대로 유지, "search_algorithm" → 알고리즘/장르 제거 / "search_algorithm_mismatch" "sot_template"
+    backend = "gemini"  # ["gemini", "chatgpt", "claude"]
     
     input_jsonl_path_list = [
-        ("/home/work/users/PIL_ghj/LLM/datasets/human-eval/data/HumanEval_in_lcb_format_io_filtered.jsonl", "HumanEval", f"humaneval_filtered_narrative_by_gemini_{option}.jsonl"),
-        ("/home/work/users/PIL_ghj/LLM/datasets/live-code-bench/test6.jsonl", "LiveCodeBench", f"test6_narrative_by_gemini_{option}.jsonl"),
-        # ("/home/work/users/PIL_ghj/LLM/datasets/codeforces/codeforces_in_lcb_format.jsonl", "CodeForces", f"codeforces_narrative_by_gemini_{option}.jsonl"),
-        # ("/home/work/users/PIL_ghj/LLM/datasets/codeforces/codeforces_mid_in_lcb_format.jsonl", "CodeForces", f"codeforces_mid_narrative_by_gemini_{option}.jsonl"),
-        # ("/home/work/users/PIL_ghj/LLM/datasets/codeforces/codeforces_challenging_in_lcb_format.jsonl", "CodeForces", f"codeforces_challenging_narrative_by_gemini_{option}.jsonl"),
+        ("/home/work/users/PIL_ghj/LLM/datasets/human-eval/data/HumanEval_in_lcb_format_io_filtered.jsonl", "HumanEval", f"humaneval_filtered_narrative_by_{backend}_{option}.jsonl"),
+        ("/home/work/users/PIL_ghj/LLM/datasets/live-code-bench/test6.jsonl", "LiveCodeBench", f"test6_narrative_by_{backend}_{option}.jsonl"),
+        ("/home/work/users/PIL_ghj/LLM/datasets/codeforces/codeforces_in_lcb_format.jsonl", "CodeForces", f"codeforces_narrative_by_{backend}_{option}.jsonl"),
+        # ("/home/work/users/PIL_ghj/LLM/datasets/codeforces/codeforces_mid_in_lcb_format.jsonl", "CodeForces", f"codeforces_mid_narrative_by_{backend}_{option}.jsonl"),
+        ("/home/work/users/PIL_ghj/LLM/datasets/codeforces/codeforces_challenging_in_lcb_format.jsonl", "CodeForces", f"codeforces_challenging_narrative_by_{backend}_{option}.jsonl"),
+        # ("/home/work/users/PIL_ghj/LLM/datasets/codeforces/codeforces_longer_in_lcb_format.jsonl", "CodeForces", f"codeforces_longer_narrative_by_{backend}_{option}.jsonl"),
     ]
-    base_input_dir = f"/home/work/users/PIL_ghj/LLM/datasets/gemini_{option}"
+    base_input_dir = f"/home/work/users/PIL_ghj/LLM/datasets/{backend}_{option}"
     
     for _, output_path_name, file_name in input_jsonl_path_list:
         input_jsonl_path = os.path.join(base_input_dir, output_path_name, file_name)

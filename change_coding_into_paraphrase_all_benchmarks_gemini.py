@@ -54,11 +54,11 @@ if __name__ == "__main__":
         ("/home/work/users/PIL_ghj/LLM/datasets/human-eval/data/HumanEval_in_lcb_format_io_filtered.jsonl", "HumanEval", "humaneval_filtered_paraphrase_by_gemini.jsonl"),
         ("/home/work/users/PIL_ghj/LLM/datasets/live-code-bench/test6.jsonl", "LiveCodeBench", "test6_paraphrase_by_gemini.jsonl"),
         ("/home/work/users/PIL_ghj/LLM/datasets/codeforces/codeforces_in_lcb_format.jsonl", "CodeForces", "codeforces_paraphrase_by_gemini.jsonl"),
-        ("/home/work/users/PIL_ghj/LLM/datasets/codeforces/codeforces_mid_in_lcb_format.jsonl", "CodeForces", "codeforces_mid_paraphrase_by_gemini.jsonl"),
+        # ("/home/work/users/PIL_ghj/LLM/datasets/codeforces/codeforces_mid_in_lcb_format.jsonl", "CodeForces", "codeforces_mid_paraphrase_by_gemini.jsonl"),
         ("/home/work/users/PIL_ghj/LLM/datasets/codeforces/codeforces_challenging_in_lcb_format.jsonl", "CodeForces", "codeforces_challenging_paraphrase_by_gemini.jsonl"),
     ]
 
-    base_output_dir = "/home/work/users/PIL_ghj/LLM/datasets/gemini_paraphrase_2"
+    base_output_dir = "/home/work/users/PIL_ghj/LLM/datasets/gemini_paraphrase_5"
 
     for input_jsonl_path, output_path_name, file_name in input_jsonl_path_list:
         try:
