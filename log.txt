@@ -1,0 +1,468 @@
+==================== Processing model: LLama3.1-8b-Ins ====================
+[Logging] Found 105 problems, each with 5 narratives.
+
+[Logging] Saved /home/work/users/PIL_ghj/LLM/datasets/Ablation/diff_quality_search_algorithm/LLama3.1-8b-Ins/HumanEval/humaneval_filtered_narrative_by_llm_narrative_1.jsonl (removed 52 too_long, 4 too_short, 2 missing_section)
+
+
+[Logging] Saved /home/work/users/PIL_ghj/LLM/datasets/Ablation/diff_quality_search_algorithm/LLama3.1-8b-Ins/HumanEval/humaneval_filtered_narrative_by_llm_narrative_2.jsonl (removed 54 too_long, 3 too_short, 3 missing_section)
+
+
+[Logging] Saved /home/work/users/PIL_ghj/LLM/datasets/Ablation/diff_quality_search_algorithm/LLama3.1-8b-Ins/HumanEval/humaneval_filtered_narrative_by_llm_narrative_3.jsonl (removed 54 too_long, 0 too_short, 3 missing_section)
+
+
+[Logging] Saved /home/work/users/PIL_ghj/LLM/datasets/Ablation/diff_quality_search_algorithm/LLama3.1-8b-Ins/HumanEval/humaneval_filtered_narrative_by_llm_narrative_4.jsonl (removed 54 too_long, 3 too_short, 2 missing_section)
+
+
+[Logging] Saved /home/work/users/PIL_ghj/LLM/datasets/Ablation/diff_quality_search_algorithm/LLama3.1-8b-Ins/HumanEval/humaneval_filtered_narrative_by_llm_narrative_5.jsonl (removed 51 too_long, 2 too_short, 8 missing_section)
+
+[Logging] Found 175 problems, each with 5 narratives.
+
+[Logging] Saved /home/work/users/PIL_ghj/LLM/datasets/Ablation/diff_quality_search_algorithm/LLama3.1-8b-Ins/LiveCodeBench/test6_narrative_by_llm_narrative_1.jsonl (removed 101 too_long, 8 too_short, 2 missing_section)
+
+
+[Logging] Saved /home/work/users/PIL_ghj/LLM/datasets/Ablation/diff_quality_search_algorithm/LLama3.1-8b-Ins/LiveCodeBench/test6_narrative_by_llm_narrative_2.jsonl (removed 98 too_long, 11 too_short, 3 missing_section)
+
+
+[Logging] Saved /home/work/users/PIL_ghj/LLM/datasets/Ablation/diff_quality_search_algorithm/LLama3.1-8b-Ins/LiveCodeBench/test6_narrative_by_llm_narrative_3.jsonl (removed 99 too_long, 6 too_short, 8 missing_section)
+
+
+[Logging] Saved /home/work/users/PIL_ghj/LLM/datasets/Ablation/diff_quality_search_algorithm/LLama3.1-8b-Ins/LiveCodeBench/test6_narrative_by_llm_narrative_4.jsonl (removed 97 too_long, 8 too_short, 6 missing_section)
+
+
+[Logging] Saved /home/work/users/PIL_ghj/LLM/datasets/Ablation/diff_quality_search_algorithm/LLama3.1-8b-Ins/LiveCodeBench/test6_narrative_by_llm_narrative_5.jsonl (removed 102 too_long, 13 too_short, 9 missing_section)
+
+[Logging] Found 157 problems, each with 5 narratives.
+
+[Logging] Saved /home/work/users/PIL_ghj/LLM/datasets/Ablation/diff_quality_search_algorithm/LLama3.1-8b-Ins/CodeForces/codeforces_narrative_by_llm_narrative_1.jsonl (removed 83 too_long, 7 too_short, 2 missing_section)
+
+
+[Logging] Saved /home/work/users/PIL_ghj/LLM/datasets/Ablation/diff_quality_search_algorithm/LLama3.1-8b-Ins/CodeForces/codeforces_narrative_by_llm_narrative_2.jsonl (removed 96 too_long, 7 too_short, 2 missing_section)
+
+
+[Logging] Saved /home/work/users/PIL_ghj/LLM/datasets/Ablation/diff_quality_search_algorithm/LLama3.1-8b-Ins/CodeForces/codeforces_narrative_by_llm_narrative_3.jsonl (removed 83 too_long, 6 too_short, 5 missing_section)
+
+
+[Logging] Saved /home/work/users/PIL_ghj/LLM/datasets/Ablation/diff_quality_search_algorithm/LLama3.1-8b-Ins/CodeForces/codeforces_narrative_by_llm_narrative_4.jsonl (removed 94 too_long, 7 too_short, 7 missing_section)
+
+
+[Logging] Saved /home/work/users/PIL_ghj/LLM/datasets/Ablation/diff_quality_search_algorithm/LLama3.1-8b-Ins/CodeForces/codeforces_narrative_by_llm_narrative_5.jsonl (removed 104 too_long, 4 too_short, 2 missing_section)
+
+[Logging] Found 108 problems, each with 5 narratives.
+
+[Logging] Saved /home/work/users/PIL_ghj/LLM/datasets/Ablation/diff_quality_search_algorithm/LLama3.1-8b-Ins/CodeForces/codeforces_challenging_narrative_by_llm_narrative_1.jsonl (removed 63 too_long, 7 too_short, 3 missing_section)
+
+
+[Logging] Saved /home/work/users/PIL_ghj/LLM/datasets/Ablation/diff_quality_search_algorithm/LLama3.1-8b-Ins/CodeForces/codeforces_challenging_narrative_by_llm_narrative_2.jsonl (removed 66 too_long, 1 too_short, 4 missing_section)
+
+
+[Logging] Saved /home/work/users/PIL_ghj/LLM/datasets/Ablation/diff_quality_search_algorithm/LLama3.1-8b-Ins/CodeForces/codeforces_challenging_narrative_by_llm_narrative_3.jsonl (removed 63 too_long, 4 too_short, 3 missing_section)
+
+
+[Logging] Saved /home/work/users/PIL_ghj/LLM/datasets/Ablation/diff_quality_search_algorithm/LLama3.1-8b-Ins/CodeForces/codeforces_challenging_narrative_by_llm_narrative_4.jsonl (removed 53 too_long, 5 too_short, 4 missing_section)
+
+
+[Logging] Saved /home/work/users/PIL_ghj/LLM/datasets/Ablation/diff_quality_search_algorithm/LLama3.1-8b-Ins/CodeForces/codeforces_challenging_narrative_by_llm_narrative_5.jsonl (removed 67 too_long, 5 too_short, 3 missing_section)
+
+[Logging] Finished processing for model: LLama3.1-8b-Ins
+
+==================== Processing model: DeepSeek-V2-Lite-Chat ====================
+[Logging] Found 105 problems, each with 5 narratives.
+
+[Logging] Saved /home/work/users/PIL_ghj/LLM/datasets/Ablation/diff_quality_search_algorithm/DeepSeek-V2-Lite-Chat/HumanEval/humaneval_filtered_narrative_by_llm_narrative_1.jsonl (removed 0 too_long, 2 too_short, 3 missing_section)
+
+
+[Logging] Saved /home/work/users/PIL_ghj/LLM/datasets/Ablation/diff_quality_search_algorithm/DeepSeek-V2-Lite-Chat/HumanEval/humaneval_filtered_narrative_by_llm_narrative_2.jsonl (removed 0 too_long, 4 too_short, 2 missing_section)
+
+
+[Logging] Saved /home/work/users/PIL_ghj/LLM/datasets/Ablation/diff_quality_search_algorithm/DeepSeek-V2-Lite-Chat/HumanEval/humaneval_filtered_narrative_by_llm_narrative_3.jsonl (removed 1 too_long, 1 too_short, 3 missing_section)
+
+
+[Logging] Saved /home/work/users/PIL_ghj/LLM/datasets/Ablation/diff_quality_search_algorithm/DeepSeek-V2-Lite-Chat/HumanEval/humaneval_filtered_narrative_by_llm_narrative_4.jsonl (removed 0 too_long, 5 too_short, 2 missing_section)
+
+
+[Logging] Saved /home/work/users/PIL_ghj/LLM/datasets/Ablation/diff_quality_search_algorithm/DeepSeek-V2-Lite-Chat/HumanEval/humaneval_filtered_narrative_by_llm_narrative_5.jsonl (removed 0 too_long, 1 too_short, 1 missing_section)
+
+[Logging] Found 175 problems, each with 5 narratives.
+
+[Logging] Saved /home/work/users/PIL_ghj/LLM/datasets/Ablation/diff_quality_search_algorithm/DeepSeek-V2-Lite-Chat/LiveCodeBench/test6_narrative_by_llm_narrative_1.jsonl (removed 1 too_long, 54 too_short, 27 missing_section)
+
+
+[Logging] Saved /home/work/users/PIL_ghj/LLM/datasets/Ablation/diff_quality_search_algorithm/DeepSeek-V2-Lite-Chat/LiveCodeBench/test6_narrative_by_llm_narrative_2.jsonl (removed 0 too_long, 51 too_short, 28 missing_section)
+
+
+[Logging] Saved /home/work/users/PIL_ghj/LLM/datasets/Ablation/diff_quality_search_algorithm/DeepSeek-V2-Lite-Chat/LiveCodeBench/test6_narrative_by_llm_narrative_3.jsonl (removed 1 too_long, 45 too_short, 33 missing_section)
+
+
+[Logging] Saved /home/work/users/PIL_ghj/LLM/datasets/Ablation/diff_quality_search_algorithm/DeepSeek-V2-Lite-Chat/LiveCodeBench/test6_narrative_by_llm_narrative_4.jsonl (removed 1 too_long, 49 too_short, 26 missing_section)
+
+
+[Logging] Saved /home/work/users/PIL_ghj/LLM/datasets/Ablation/diff_quality_search_algorithm/DeepSeek-V2-Lite-Chat/LiveCodeBench/test6_narrative_by_llm_narrative_5.jsonl (removed 0 too_long, 60 too_short, 25 missing_section)
+
+[Logging] Found 157 problems, each with 5 narratives.
+
+[Logging] Saved /home/work/users/PIL_ghj/LLM/datasets/Ablation/diff_quality_search_algorithm/DeepSeek-V2-Lite-Chat/CodeForces/codeforces_narrative_by_llm_narrative_1.jsonl (removed 2 too_long, 25 too_short, 19 missing_section)
+
+
+[Logging] Saved /home/work/users/PIL_ghj/LLM/datasets/Ablation/diff_quality_search_algorithm/DeepSeek-V2-Lite-Chat/CodeForces/codeforces_narrative_by_llm_narrative_2.jsonl (removed 0 too_long, 16 too_short, 23 missing_section)
+
+
+[Logging] Saved /home/work/users/PIL_ghj/LLM/datasets/Ablation/diff_quality_search_algorithm/DeepSeek-V2-Lite-Chat/CodeForces/codeforces_narrative_by_llm_narrative_3.jsonl (removed 1 too_long, 19 too_short, 22 missing_section)
+
+
+[Logging] Saved /home/work/users/PIL_ghj/LLM/datasets/Ablation/diff_quality_search_algorithm/DeepSeek-V2-Lite-Chat/CodeForces/codeforces_narrative_by_llm_narrative_4.jsonl (removed 1 too_long, 16 too_short, 37 missing_section)
+
+
+[Logging] Saved /home/work/users/PIL_ghj/LLM/datasets/Ablation/diff_quality_search_algorithm/DeepSeek-V2-Lite-Chat/CodeForces/codeforces_narrative_by_llm_narrative_5.jsonl (removed 1 too_long, 20 too_short, 26 missing_section)
+
+[Logging] Found 108 problems, each with 5 narratives.
+
+[Logging] Saved /home/work/users/PIL_ghj/LLM/datasets/Ablation/diff_quality_search_algorithm/DeepSeek-V2-Lite-Chat/CodeForces/codeforces_challenging_narrative_by_llm_narrative_1.jsonl (removed 1 too_long, 8 too_short, 31 missing_section)
+
+
+[Logging] Saved /home/work/users/PIL_ghj/LLM/datasets/Ablation/diff_quality_search_algorithm/DeepSeek-V2-Lite-Chat/CodeForces/codeforces_challenging_narrative_by_llm_narrative_2.jsonl (removed 1 too_long, 17 too_short, 27 missing_section)
+
+
+[Logging] Saved /home/work/users/PIL_ghj/LLM/datasets/Ablation/diff_quality_search_algorithm/DeepSeek-V2-Lite-Chat/CodeForces/codeforces_challenging_narrative_by_llm_narrative_3.jsonl (removed 0 too_long, 7 too_short, 33 missing_section)
+
+
+[Logging] Saved /home/work/users/PIL_ghj/LLM/datasets/Ablation/diff_quality_search_algorithm/DeepSeek-V2-Lite-Chat/CodeForces/codeforces_challenging_narrative_by_llm_narrative_4.jsonl (removed 0 too_long, 17 too_short, 27 missing_section)
+
+
+[Logging] Saved /home/work/users/PIL_ghj/LLM/datasets/Ablation/diff_quality_search_algorithm/DeepSeek-V2-Lite-Chat/CodeForces/codeforces_challenging_narrative_by_llm_narrative_5.jsonl (removed 0 too_long, 15 too_short, 31 missing_section)
+
+[Logging] Finished processing for model: DeepSeek-V2-Lite-Chat
+
+==================== Processing model: Gemma-2-9b-Ins ====================
+[Logging] Found 105 problems, each with 5 narratives.
+
+[Logging] Saved /home/work/users/PIL_ghj/LLM/datasets/Ablation/diff_quality_search_algorithm/Gemma-2-9b-Ins/HumanEval/humaneval_filtered_narrative_by_llm_narrative_1.jsonl (removed 0 too_long, 22 too_short, 24 missing_section)
+
+
+[Logging] Saved /home/work/users/PIL_ghj/LLM/datasets/Ablation/diff_quality_search_algorithm/Gemma-2-9b-Ins/HumanEval/humaneval_filtered_narrative_by_llm_narrative_2.jsonl (removed 0 too_long, 18 too_short, 22 missing_section)
+
+
+[Logging] Saved /home/work/users/PIL_ghj/LLM/datasets/Ablation/diff_quality_search_algorithm/Gemma-2-9b-Ins/HumanEval/humaneval_filtered_narrative_by_llm_narrative_3.jsonl (removed 0 too_long, 18 too_short, 23 missing_section)
+
+
+[Logging] Saved /home/work/users/PIL_ghj/LLM/datasets/Ablation/diff_quality_search_algorithm/Gemma-2-9b-Ins/HumanEval/humaneval_filtered_narrative_by_llm_narrative_4.jsonl (removed 0 too_long, 16 too_short, 24 missing_section)
+
+
+[Logging] Saved /home/work/users/PIL_ghj/LLM/datasets/Ablation/diff_quality_search_algorithm/Gemma-2-9b-Ins/HumanEval/humaneval_filtered_narrative_by_llm_narrative_5.jsonl (removed 0 too_long, 23 too_short, 20 missing_section)
+
+[Logging] Found 175 problems, each with 5 narratives.
+
+[Logging] Saved /home/work/users/PIL_ghj/LLM/datasets/Ablation/diff_quality_search_algorithm/Gemma-2-9b-Ins/LiveCodeBench/test6_narrative_by_llm_narrative_1.jsonl (removed 0 too_long, 78 too_short, 3 missing_section)
+
+
+[Logging] Saved /home/work/users/PIL_ghj/LLM/datasets/Ablation/diff_quality_search_algorithm/Gemma-2-9b-Ins/LiveCodeBench/test6_narrative_by_llm_narrative_2.jsonl (removed 0 too_long, 97 too_short, 1 missing_section)
+
+
+[Logging] Saved /home/work/users/PIL_ghj/LLM/datasets/Ablation/diff_quality_search_algorithm/Gemma-2-9b-Ins/LiveCodeBench/test6_narrative_by_llm_narrative_3.jsonl (removed 0 too_long, 83 too_short, 4 missing_section)
+
+
+[Logging] Saved /home/work/users/PIL_ghj/LLM/datasets/Ablation/diff_quality_search_algorithm/Gemma-2-9b-Ins/LiveCodeBench/test6_narrative_by_llm_narrative_4.jsonl (removed 0 too_long, 77 too_short, 2 missing_section)
+
+
+[Logging] Saved /home/work/users/PIL_ghj/LLM/datasets/Ablation/diff_quality_search_algorithm/Gemma-2-9b-Ins/LiveCodeBench/test6_narrative_by_llm_narrative_5.jsonl (removed 0 too_long, 75 too_short, 3 missing_section)
+
+[Logging] Found 157 problems, each with 5 narratives.
+
+[Logging] Saved /home/work/users/PIL_ghj/LLM/datasets/Ablation/diff_quality_search_algorithm/Gemma-2-9b-Ins/CodeForces/codeforces_narrative_by_llm_narrative_1.jsonl (removed 0 too_long, 73 too_short, 5 missing_section)
+
+
+[Logging] Saved /home/work/users/PIL_ghj/LLM/datasets/Ablation/diff_quality_search_algorithm/Gemma-2-9b-Ins/CodeForces/codeforces_narrative_by_llm_narrative_2.jsonl (removed 0 too_long, 78 too_short, 7 missing_section)
+
+
+[Logging] Saved /home/work/users/PIL_ghj/LLM/datasets/Ablation/diff_quality_search_algorithm/Gemma-2-9b-Ins/CodeForces/codeforces_narrative_by_llm_narrative_3.jsonl (removed 0 too_long, 73 too_short, 6 missing_section)
+
+
+[Logging] Saved /home/work/users/PIL_ghj/LLM/datasets/Ablation/diff_quality_search_algorithm/Gemma-2-9b-Ins/CodeForces/codeforces_narrative_by_llm_narrative_4.jsonl (removed 0 too_long, 78 too_short, 5 missing_section)
+
+
+[Logging] Saved /home/work/users/PIL_ghj/LLM/datasets/Ablation/diff_quality_search_algorithm/Gemma-2-9b-Ins/CodeForces/codeforces_narrative_by_llm_narrative_5.jsonl (removed 0 too_long, 65 too_short, 3 missing_section)
+
+[Logging] Found 108 problems, each with 5 narratives.
+
+[Logging] Saved /home/work/users/PIL_ghj/LLM/datasets/Ablation/diff_quality_search_algorithm/Gemma-2-9b-Ins/CodeForces/codeforces_challenging_narrative_by_llm_narrative_1.jsonl (removed 0 too_long, 47 too_short, 5 missing_section)
+
+
+[Logging] Saved /home/work/users/PIL_ghj/LLM/datasets/Ablation/diff_quality_search_algorithm/Gemma-2-9b-Ins/CodeForces/codeforces_challenging_narrative_by_llm_narrative_2.jsonl (removed 0 too_long, 46 too_short, 5 missing_section)
+
+
+[Logging] Saved /home/work/users/PIL_ghj/LLM/datasets/Ablation/diff_quality_search_algorithm/Gemma-2-9b-Ins/CodeForces/codeforces_challenging_narrative_by_llm_narrative_3.jsonl (removed 0 too_long, 61 too_short, 3 missing_section)
+
+
+[Logging] Saved /home/work/users/PIL_ghj/LLM/datasets/Ablation/diff_quality_search_algorithm/Gemma-2-9b-Ins/CodeForces/codeforces_challenging_narrative_by_llm_narrative_4.jsonl (removed 0 too_long, 55 too_short, 4 missing_section)
+
+
+[Logging] Saved /home/work/users/PIL_ghj/LLM/datasets/Ablation/diff_quality_search_algorithm/Gemma-2-9b-Ins/CodeForces/codeforces_challenging_narrative_by_llm_narrative_5.jsonl (removed 0 too_long, 58 too_short, 5 missing_section)
+
+[Logging] Finished processing for model: Gemma-2-9b-Ins
+
+==================== Processing model: Gemma-2-27b-Ins ====================
+[Logging] Found 105 problems, each with 5 narratives.
+
+[Logging] Saved /home/work/users/PIL_ghj/LLM/datasets/Ablation/diff_quality_search_algorithm/Gemma-2-27b-Ins/HumanEval/humaneval_filtered_narrative_by_llm_narrative_1.jsonl (removed 0 too_long, 7 too_short, 3 missing_section)
+
+
+[Logging] Saved /home/work/users/PIL_ghj/LLM/datasets/Ablation/diff_quality_search_algorithm/Gemma-2-27b-Ins/HumanEval/humaneval_filtered_narrative_by_llm_narrative_2.jsonl (removed 0 too_long, 5 too_short, 4 missing_section)
+
+
+[Logging] Saved /home/work/users/PIL_ghj/LLM/datasets/Ablation/diff_quality_search_algorithm/Gemma-2-27b-Ins/HumanEval/humaneval_filtered_narrative_by_llm_narrative_3.jsonl (removed 0 too_long, 4 too_short, 3 missing_section)
+
+
+[Logging] Saved /home/work/users/PIL_ghj/LLM/datasets/Ablation/diff_quality_search_algorithm/Gemma-2-27b-Ins/HumanEval/humaneval_filtered_narrative_by_llm_narrative_4.jsonl (removed 0 too_long, 5 too_short, 1 missing_section)
+
+
+[Logging] Saved /home/work/users/PIL_ghj/LLM/datasets/Ablation/diff_quality_search_algorithm/Gemma-2-27b-Ins/HumanEval/humaneval_filtered_narrative_by_llm_narrative_5.jsonl (removed 0 too_long, 7 too_short, 0 missing_section)
+
+[Logging] Found 175 problems, each with 5 narratives.
+
+[Logging] Saved /home/work/users/PIL_ghj/LLM/datasets/Ablation/diff_quality_search_algorithm/Gemma-2-27b-Ins/LiveCodeBench/test6_narrative_by_llm_narrative_1.jsonl (removed 0 too_long, 4 too_short, 1 missing_section)
+
+
+[Logging] Saved /home/work/users/PIL_ghj/LLM/datasets/Ablation/diff_quality_search_algorithm/Gemma-2-27b-Ins/LiveCodeBench/test6_narrative_by_llm_narrative_2.jsonl (removed 0 too_long, 4 too_short, 0 missing_section)
+
+
+[Logging] Saved /home/work/users/PIL_ghj/LLM/datasets/Ablation/diff_quality_search_algorithm/Gemma-2-27b-Ins/LiveCodeBench/test6_narrative_by_llm_narrative_3.jsonl (removed 0 too_long, 3 too_short, 0 missing_section)
+
+
+[Logging] Saved /home/work/users/PIL_ghj/LLM/datasets/Ablation/diff_quality_search_algorithm/Gemma-2-27b-Ins/LiveCodeBench/test6_narrative_by_llm_narrative_4.jsonl (removed 0 too_long, 6 too_short, 0 missing_section)
+
+
+[Logging] Saved /home/work/users/PIL_ghj/LLM/datasets/Ablation/diff_quality_search_algorithm/Gemma-2-27b-Ins/LiveCodeBench/test6_narrative_by_llm_narrative_5.jsonl (removed 0 too_long, 2 too_short, 0 missing_section)
+
+[Logging] Found 157 problems, each with 5 narratives.
+
+[Logging] Saved /home/work/users/PIL_ghj/LLM/datasets/Ablation/diff_quality_search_algorithm/Gemma-2-27b-Ins/CodeForces/codeforces_narrative_by_llm_narrative_1.jsonl (removed 0 too_long, 4 too_short, 0 missing_section)
+
+
+[Logging] Saved /home/work/users/PIL_ghj/LLM/datasets/Ablation/diff_quality_search_algorithm/Gemma-2-27b-Ins/CodeForces/codeforces_narrative_by_llm_narrative_2.jsonl (removed 0 too_long, 9 too_short, 0 missing_section)
+
+
+[Logging] Saved /home/work/users/PIL_ghj/LLM/datasets/Ablation/diff_quality_search_algorithm/Gemma-2-27b-Ins/CodeForces/codeforces_narrative_by_llm_narrative_3.jsonl (removed 0 too_long, 5 too_short, 0 missing_section)
+
+
+[Logging] Saved /home/work/users/PIL_ghj/LLM/datasets/Ablation/diff_quality_search_algorithm/Gemma-2-27b-Ins/CodeForces/codeforces_narrative_by_llm_narrative_4.jsonl (removed 0 too_long, 5 too_short, 0 missing_section)
+
+
+[Logging] Saved /home/work/users/PIL_ghj/LLM/datasets/Ablation/diff_quality_search_algorithm/Gemma-2-27b-Ins/CodeForces/codeforces_narrative_by_llm_narrative_5.jsonl (removed 0 too_long, 9 too_short, 1 missing_section)
+
+[Logging] Found 108 problems, each with 5 narratives.
+
+[Logging] Saved /home/work/users/PIL_ghj/LLM/datasets/Ablation/diff_quality_search_algorithm/Gemma-2-27b-Ins/CodeForces/codeforces_challenging_narrative_by_llm_narrative_1.jsonl (removed 0 too_long, 4 too_short, 0 missing_section)
+
+
+[Logging] Saved /home/work/users/PIL_ghj/LLM/datasets/Ablation/diff_quality_search_algorithm/Gemma-2-27b-Ins/CodeForces/codeforces_challenging_narrative_by_llm_narrative_2.jsonl (removed 0 too_long, 4 too_short, 0 missing_section)
+
+
+[Logging] Saved /home/work/users/PIL_ghj/LLM/datasets/Ablation/diff_quality_search_algorithm/Gemma-2-27b-Ins/CodeForces/codeforces_challenging_narrative_by_llm_narrative_3.jsonl (removed 0 too_long, 4 too_short, 0 missing_section)
+
+
+[Logging] Saved /home/work/users/PIL_ghj/LLM/datasets/Ablation/diff_quality_search_algorithm/Gemma-2-27b-Ins/CodeForces/codeforces_challenging_narrative_by_llm_narrative_4.jsonl (removed 0 too_long, 2 too_short, 2 missing_section)
+
+
+[Logging] Saved /home/work/users/PIL_ghj/LLM/datasets/Ablation/diff_quality_search_algorithm/Gemma-2-27b-Ins/CodeForces/codeforces_challenging_narrative_by_llm_narrative_5.jsonl (removed 0 too_long, 2 too_short, 0 missing_section)
+
+[Logging] Finished processing for model: Gemma-2-27b-Ins
+
+==================== Processing model: Qwen2.5-7B-Ins ====================
+[Logging] Found 105 problems, each with 5 narratives.
+
+[Logging] Saved /home/work/users/PIL_ghj/LLM/datasets/Ablation/diff_quality_search_algorithm/Qwen2.5-7B-Ins/HumanEval/humaneval_filtered_narrative_by_llm_narrative_1.jsonl (removed 65 too_long, 0 too_short, 0 missing_section)
+
+
+[Logging] Saved /home/work/users/PIL_ghj/LLM/datasets/Ablation/diff_quality_search_algorithm/Qwen2.5-7B-Ins/HumanEval/humaneval_filtered_narrative_by_llm_narrative_2.jsonl (removed 57 too_long, 0 too_short, 1 missing_section)
+
+
+[Logging] Saved /home/work/users/PIL_ghj/LLM/datasets/Ablation/diff_quality_search_algorithm/Qwen2.5-7B-Ins/HumanEval/humaneval_filtered_narrative_by_llm_narrative_3.jsonl (removed 63 too_long, 0 too_short, 0 missing_section)
+
+
+[Logging] Saved /home/work/users/PIL_ghj/LLM/datasets/Ablation/diff_quality_search_algorithm/Qwen2.5-7B-Ins/HumanEval/humaneval_filtered_narrative_by_llm_narrative_4.jsonl (removed 59 too_long, 0 too_short, 0 missing_section)
+
+
+[Logging] Saved /home/work/users/PIL_ghj/LLM/datasets/Ablation/diff_quality_search_algorithm/Qwen2.5-7B-Ins/HumanEval/humaneval_filtered_narrative_by_llm_narrative_5.jsonl (removed 53 too_long, 0 too_short, 0 missing_section)
+
+[Logging] Found 175 problems, each with 5 narratives.
+
+[Logging] Saved /home/work/users/PIL_ghj/LLM/datasets/Ablation/diff_quality_search_algorithm/Qwen2.5-7B-Ins/LiveCodeBench/test6_narrative_by_llm_narrative_1.jsonl (removed 107 too_long, 0 too_short, 1 missing_section)
+
+
+[Logging] Saved /home/work/users/PIL_ghj/LLM/datasets/Ablation/diff_quality_search_algorithm/Qwen2.5-7B-Ins/LiveCodeBench/test6_narrative_by_llm_narrative_2.jsonl (removed 104 too_long, 1 too_short, 2 missing_section)
+
+
+[Logging] Saved /home/work/users/PIL_ghj/LLM/datasets/Ablation/diff_quality_search_algorithm/Qwen2.5-7B-Ins/LiveCodeBench/test6_narrative_by_llm_narrative_3.jsonl (removed 120 too_long, 0 too_short, 0 missing_section)
+
+
+[Logging] Saved /home/work/users/PIL_ghj/LLM/datasets/Ablation/diff_quality_search_algorithm/Qwen2.5-7B-Ins/LiveCodeBench/test6_narrative_by_llm_narrative_4.jsonl (removed 120 too_long, 1 too_short, 2 missing_section)
+
+
+[Logging] Saved /home/work/users/PIL_ghj/LLM/datasets/Ablation/diff_quality_search_algorithm/Qwen2.5-7B-Ins/LiveCodeBench/test6_narrative_by_llm_narrative_5.jsonl (removed 110 too_long, 2 too_short, 3 missing_section)
+
+[Logging] Found 157 problems, each with 5 narratives.
+
+[Logging] Saved /home/work/users/PIL_ghj/LLM/datasets/Ablation/diff_quality_search_algorithm/Qwen2.5-7B-Ins/CodeForces/codeforces_narrative_by_llm_narrative_1.jsonl (removed 95 too_long, 0 too_short, 1 missing_section)
+
+
+[Logging] Saved /home/work/users/PIL_ghj/LLM/datasets/Ablation/diff_quality_search_algorithm/Qwen2.5-7B-Ins/CodeForces/codeforces_narrative_by_llm_narrative_2.jsonl (removed 91 too_long, 0 too_short, 1 missing_section)
+
+
+[Logging] Saved /home/work/users/PIL_ghj/LLM/datasets/Ablation/diff_quality_search_algorithm/Qwen2.5-7B-Ins/CodeForces/codeforces_narrative_by_llm_narrative_3.jsonl (removed 77 too_long, 1 too_short, 2 missing_section)
+
+
+[Logging] Saved /home/work/users/PIL_ghj/LLM/datasets/Ablation/diff_quality_search_algorithm/Qwen2.5-7B-Ins/CodeForces/codeforces_narrative_by_llm_narrative_4.jsonl (removed 97 too_long, 1 too_short, 1 missing_section)
+
+
+[Logging] Saved /home/work/users/PIL_ghj/LLM/datasets/Ablation/diff_quality_search_algorithm/Qwen2.5-7B-Ins/CodeForces/codeforces_narrative_by_llm_narrative_5.jsonl (removed 107 too_long, 0 too_short, 1 missing_section)
+
+[Logging] Found 108 problems, each with 5 narratives.
+
+[Logging] Saved /home/work/users/PIL_ghj/LLM/datasets/Ablation/diff_quality_search_algorithm/Qwen2.5-7B-Ins/CodeForces/codeforces_challenging_narrative_by_llm_narrative_1.jsonl (removed 69 too_long, 1 too_short, 1 missing_section)
+
+
+[Logging] Saved /home/work/users/PIL_ghj/LLM/datasets/Ablation/diff_quality_search_algorithm/Qwen2.5-7B-Ins/CodeForces/codeforces_challenging_narrative_by_llm_narrative_2.jsonl (removed 66 too_long, 1 too_short, 2 missing_section)
+
+
+[Logging] Saved /home/work/users/PIL_ghj/LLM/datasets/Ablation/diff_quality_search_algorithm/Qwen2.5-7B-Ins/CodeForces/codeforces_challenging_narrative_by_llm_narrative_3.jsonl (removed 70 too_long, 0 too_short, 2 missing_section)
+
+
+[Logging] Saved /home/work/users/PIL_ghj/LLM/datasets/Ablation/diff_quality_search_algorithm/Qwen2.5-7B-Ins/CodeForces/codeforces_challenging_narrative_by_llm_narrative_4.jsonl (removed 71 too_long, 0 too_short, 0 missing_section)
+
+
+[Logging] Saved /home/work/users/PIL_ghj/LLM/datasets/Ablation/diff_quality_search_algorithm/Qwen2.5-7B-Ins/CodeForces/codeforces_challenging_narrative_by_llm_narrative_5.jsonl (removed 64 too_long, 1 too_short, 1 missing_section)
+
+[Logging] Finished processing for model: Qwen2.5-7B-Ins
+
+==================== Processing model: Qwen2.5-32B-Ins ====================
+[Logging] Found 105 problems, each with 5 narratives.
+
+[Logging] Saved /home/work/users/PIL_ghj/LLM/datasets/Ablation/diff_quality_search_algorithm/Qwen2.5-32B-Ins/HumanEval/humaneval_filtered_narrative_by_llm_narrative_1.jsonl (removed 24 too_long, 0 too_short, 0 missing_section)
+
+
+[Logging] Saved /home/work/users/PIL_ghj/LLM/datasets/Ablation/diff_quality_search_algorithm/Qwen2.5-32B-Ins/HumanEval/humaneval_filtered_narrative_by_llm_narrative_2.jsonl (removed 25 too_long, 0 too_short, 0 missing_section)
+
+
+[Logging] Saved /home/work/users/PIL_ghj/LLM/datasets/Ablation/diff_quality_search_algorithm/Qwen2.5-32B-Ins/HumanEval/humaneval_filtered_narrative_by_llm_narrative_3.jsonl (removed 25 too_long, 0 too_short, 0 missing_section)
+
+
+[Logging] Saved /home/work/users/PIL_ghj/LLM/datasets/Ablation/diff_quality_search_algorithm/Qwen2.5-32B-Ins/HumanEval/humaneval_filtered_narrative_by_llm_narrative_4.jsonl (removed 28 too_long, 0 too_short, 0 missing_section)
+
+
+[Logging] Saved /home/work/users/PIL_ghj/LLM/datasets/Ablation/diff_quality_search_algorithm/Qwen2.5-32B-Ins/HumanEval/humaneval_filtered_narrative_by_llm_narrative_5.jsonl (removed 29 too_long, 0 too_short, 0 missing_section)
+
+[Logging] Found 175 problems, each with 5 narratives.
+
+[Logging] Saved /home/work/users/PIL_ghj/LLM/datasets/Ablation/diff_quality_search_algorithm/Qwen2.5-32B-Ins/LiveCodeBench/test6_narrative_by_llm_narrative_1.jsonl (removed 45 too_long, 0 too_short, 0 missing_section)
+
+
+[Logging] Saved /home/work/users/PIL_ghj/LLM/datasets/Ablation/diff_quality_search_algorithm/Qwen2.5-32B-Ins/LiveCodeBench/test6_narrative_by_llm_narrative_2.jsonl (removed 34 too_long, 0 too_short, 0 missing_section)
+
+
+[Logging] Saved /home/work/users/PIL_ghj/LLM/datasets/Ablation/diff_quality_search_algorithm/Qwen2.5-32B-Ins/LiveCodeBench/test6_narrative_by_llm_narrative_3.jsonl (removed 30 too_long, 0 too_short, 0 missing_section)
+
+
+[Logging] Saved /home/work/users/PIL_ghj/LLM/datasets/Ablation/diff_quality_search_algorithm/Qwen2.5-32B-Ins/LiveCodeBench/test6_narrative_by_llm_narrative_4.jsonl (removed 52 too_long, 0 too_short, 0 missing_section)
+
+
+[Logging] Saved /home/work/users/PIL_ghj/LLM/datasets/Ablation/diff_quality_search_algorithm/Qwen2.5-32B-Ins/LiveCodeBench/test6_narrative_by_llm_narrative_5.jsonl (removed 36 too_long, 0 too_short, 0 missing_section)
+
+[Logging] Found 157 problems, each with 5 narratives.
+
+[Logging] Saved /home/work/users/PIL_ghj/LLM/datasets/Ablation/diff_quality_search_algorithm/Qwen2.5-32B-Ins/CodeForces/codeforces_narrative_by_llm_narrative_1.jsonl (removed 40 too_long, 0 too_short, 0 missing_section)
+
+
+[Logging] Saved /home/work/users/PIL_ghj/LLM/datasets/Ablation/diff_quality_search_algorithm/Qwen2.5-32B-Ins/CodeForces/codeforces_narrative_by_llm_narrative_2.jsonl (removed 40 too_long, 0 too_short, 0 missing_section)
+
+
+[Logging] Saved /home/work/users/PIL_ghj/LLM/datasets/Ablation/diff_quality_search_algorithm/Qwen2.5-32B-Ins/CodeForces/codeforces_narrative_by_llm_narrative_3.jsonl (removed 36 too_long, 0 too_short, 0 missing_section)
+
+
+[Logging] Saved /home/work/users/PIL_ghj/LLM/datasets/Ablation/diff_quality_search_algorithm/Qwen2.5-32B-Ins/CodeForces/codeforces_narrative_by_llm_narrative_4.jsonl (removed 41 too_long, 2 too_short, 0 missing_section)
+
+
+[Logging] Saved /home/work/users/PIL_ghj/LLM/datasets/Ablation/diff_quality_search_algorithm/Qwen2.5-32B-Ins/CodeForces/codeforces_narrative_by_llm_narrative_5.jsonl (removed 35 too_long, 0 too_short, 0 missing_section)
+
+[Logging] Found 108 problems, each with 5 narratives.
+
+[Logging] Saved /home/work/users/PIL_ghj/LLM/datasets/Ablation/diff_quality_search_algorithm/Qwen2.5-32B-Ins/CodeForces/codeforces_challenging_narrative_by_llm_narrative_1.jsonl (removed 22 too_long, 1 too_short, 0 missing_section)
+
+
+[Logging] Saved /home/work/users/PIL_ghj/LLM/datasets/Ablation/diff_quality_search_algorithm/Qwen2.5-32B-Ins/CodeForces/codeforces_challenging_narrative_by_llm_narrative_2.jsonl (removed 18 too_long, 0 too_short, 0 missing_section)
+
+
+[Logging] Saved /home/work/users/PIL_ghj/LLM/datasets/Ablation/diff_quality_search_algorithm/Qwen2.5-32B-Ins/CodeForces/codeforces_challenging_narrative_by_llm_narrative_3.jsonl (removed 27 too_long, 0 too_short, 0 missing_section)
+
+
+[Logging] Saved /home/work/users/PIL_ghj/LLM/datasets/Ablation/diff_quality_search_algorithm/Qwen2.5-32B-Ins/CodeForces/codeforces_challenging_narrative_by_llm_narrative_4.jsonl (removed 23 too_long, 0 too_short, 0 missing_section)
+
+
+[Logging] Saved /home/work/users/PIL_ghj/LLM/datasets/Ablation/diff_quality_search_algorithm/Qwen2.5-32B-Ins/CodeForces/codeforces_challenging_narrative_by_llm_narrative_5.jsonl (removed 24 too_long, 1 too_short, 0 missing_section)
+
+[Logging] Finished processing for model: Qwen2.5-32B-Ins
+
+==================== Processing model: Mistral-Small-24B-Instruct-2501 ====================
+[Logging] Found 105 problems, each with 5 narratives.
+
+[Logging] Saved /home/work/users/PIL_ghj/LLM/datasets/Ablation/diff_quality_search_algorithm/Mistral-Small-24B-Instruct-2501/HumanEval/humaneval_filtered_narrative_by_llm_narrative_1.jsonl (removed 0 too_long, 1 too_short, 2 missing_section)
+
+
+[Logging] Saved /home/work/users/PIL_ghj/LLM/datasets/Ablation/diff_quality_search_algorithm/Mistral-Small-24B-Instruct-2501/HumanEval/humaneval_filtered_narrative_by_llm_narrative_2.jsonl (removed 0 too_long, 4 too_short, 2 missing_section)
+
+
+[Logging] Saved /home/work/users/PIL_ghj/LLM/datasets/Ablation/diff_quality_search_algorithm/Mistral-Small-24B-Instruct-2501/HumanEval/humaneval_filtered_narrative_by_llm_narrative_3.jsonl (removed 0 too_long, 1 too_short, 1 missing_section)
+
+
+[Logging] Saved /home/work/users/PIL_ghj/LLM/datasets/Ablation/diff_quality_search_algorithm/Mistral-Small-24B-Instruct-2501/HumanEval/humaneval_filtered_narrative_by_llm_narrative_4.jsonl (removed 0 too_long, 7 too_short, 1 missing_section)
+
+
+[Logging] Saved /home/work/users/PIL_ghj/LLM/datasets/Ablation/diff_quality_search_algorithm/Mistral-Small-24B-Instruct-2501/HumanEval/humaneval_filtered_narrative_by_llm_narrative_5.jsonl (removed 0 too_long, 1 too_short, 1 missing_section)
+
+[Logging] Found 175 problems, each with 5 narratives.
+
+[Logging] Saved /home/work/users/PIL_ghj/LLM/datasets/Ablation/diff_quality_search_algorithm/Mistral-Small-24B-Instruct-2501/LiveCodeBench/test6_narrative_by_llm_narrative_1.jsonl (removed 0 too_long, 26 too_short, 5 missing_section)
+
+
+[Logging] Saved /home/work/users/PIL_ghj/LLM/datasets/Ablation/diff_quality_search_algorithm/Mistral-Small-24B-Instruct-2501/LiveCodeBench/test6_narrative_by_llm_narrative_2.jsonl (removed 0 too_long, 27 too_short, 7 missing_section)
+
+
+[Logging] Saved /home/work/users/PIL_ghj/LLM/datasets/Ablation/diff_quality_search_algorithm/Mistral-Small-24B-Instruct-2501/LiveCodeBench/test6_narrative_by_llm_narrative_3.jsonl (removed 0 too_long, 20 too_short, 8 missing_section)
+
+
+[Logging] Saved /home/work/users/PIL_ghj/LLM/datasets/Ablation/diff_quality_search_algorithm/Mistral-Small-24B-Instruct-2501/LiveCodeBench/test6_narrative_by_llm_narrative_4.jsonl (removed 0 too_long, 17 too_short, 7 missing_section)
+
+
+[Logging] Saved /home/work/users/PIL_ghj/LLM/datasets/Ablation/diff_quality_search_algorithm/Mistral-Small-24B-Instruct-2501/LiveCodeBench/test6_narrative_by_llm_narrative_5.jsonl (removed 0 too_long, 18 too_short, 4 missing_section)
+
+[Logging] Found 157 problems, each with 5 narratives.
+
+[Logging] Saved /home/work/users/PIL_ghj/LLM/datasets/Ablation/diff_quality_search_algorithm/Mistral-Small-24B-Instruct-2501/CodeForces/codeforces_narrative_by_llm_narrative_1.jsonl (removed 0 too_long, 17 too_short, 4 missing_section)
+
+
+[Logging] Saved /home/work/users/PIL_ghj/LLM/datasets/Ablation/diff_quality_search_algorithm/Mistral-Small-24B-Instruct-2501/CodeForces/codeforces_narrative_by_llm_narrative_2.jsonl (removed 0 too_long, 17 too_short, 4 missing_section)
+
+
+[Logging] Saved /home/work/users/PIL_ghj/LLM/datasets/Ablation/diff_quality_search_algorithm/Mistral-Small-24B-Instruct-2501/CodeForces/codeforces_narrative_by_llm_narrative_3.jsonl (removed 1 too_long, 13 too_short, 3 missing_section)
+
+
+[Logging] Saved /home/work/users/PIL_ghj/LLM/datasets/Ablation/diff_quality_search_algorithm/Mistral-Small-24B-Instruct-2501/CodeForces/codeforces_narrative_by_llm_narrative_4.jsonl (removed 0 too_long, 14 too_short, 5 missing_section)
+
+
+[Logging] Saved /home/work/users/PIL_ghj/LLM/datasets/Ablation/diff_quality_search_algorithm/Mistral-Small-24B-Instruct-2501/CodeForces/codeforces_narrative_by_llm_narrative_5.jsonl (removed 0 too_long, 19 too_short, 5 missing_section)
+
+[Logging] Found 108 problems, each with 5 narratives.
+
+[Logging] Saved /home/work/users/PIL_ghj/LLM/datasets/Ablation/diff_quality_search_algorithm/Mistral-Small-24B-Instruct-2501/CodeForces/codeforces_challenging_narrative_by_llm_narrative_1.jsonl (removed 0 too_long, 20 too_short, 3 missing_section)
+
+
+[Logging] Saved /home/work/users/PIL_ghj/LLM/datasets/Ablation/diff_quality_search_algorithm/Mistral-Small-24B-Instruct-2501/CodeForces/codeforces_challenging_narrative_by_llm_narrative_2.jsonl (removed 0 too_long, 18 too_short, 3 missing_section)
+
+
+[Logging] Saved /home/work/users/PIL_ghj/LLM/datasets/Ablation/diff_quality_search_algorithm/Mistral-Small-24B-Instruct-2501/CodeForces/codeforces_challenging_narrative_by_llm_narrative_3.jsonl (removed 0 too_long, 15 too_short, 3 missing_section)
+
+
+[Logging] Saved /home/work/users/PIL_ghj/LLM/datasets/Ablation/diff_quality_search_algorithm/Mistral-Small-24B-Instruct-2501/CodeForces/codeforces_challenging_narrative_by_llm_narrative_4.jsonl (removed 0 too_long, 14 too_short, 3 missing_section)
+
+
+[Logging] Saved /home/work/users/PIL_ghj/LLM/datasets/Ablation/diff_quality_search_algorithm/Mistral-Small-24B-Instruct-2501/CodeForces/codeforces_challenging_narrative_by_llm_narrative_5.jsonl (removed 0 too_long, 15 too_short, 1 missing_section)
+
+[Logging] Finished processing for model: Mistral-Small-24B-Instruct-2501

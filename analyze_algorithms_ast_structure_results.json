@@ -1,0 +1,392 @@
+{
+  "humaneval_filtered": {
+    "original": {
+      "correct": {
+        "num_top_functions": {
+          "mean": 0,
+          "stdev": 0.0,
+          "n": 963
+        },
+        "num_all_functions": {
+          "mean": 1.065,
+          "stdev": 0.256,
+          "n": 963
+        },
+        "has_helper_func": {
+          "rate_pct": 100.0,
+          "n": 963
+        },
+        "ast_depth": {
+          "mean": 9.085,
+          "stdev": 1.846,
+          "n": 963
+        },
+        "num_nodes": {
+          "mean": 71.906,
+          "stdev": 39.259,
+          "n": 963
+        },
+        "cyclomatic_proxy": {
+          "mean": 2.895,
+          "stdev": 2.472,
+          "n": 963
+        }
+      },
+      "incorrect": {
+        "num_top_functions": {
+          "mean": 0,
+          "stdev": 0.0,
+          "n": 84
+        },
+        "num_all_functions": {
+          "mean": 1.417,
+          "stdev": 0.934,
+          "n": 84
+        },
+        "has_helper_func": {
+          "rate_pct": 100.0,
+          "n": 84
+        },
+        "ast_depth": {
+          "mean": 10.214,
+          "stdev": 1.481,
+          "n": 84
+        },
+        "num_nodes": {
+          "mean": 111.202,
+          "stdev": 70.359,
+          "n": 84
+        },
+        "cyclomatic_proxy": {
+          "mean": 4.31,
+          "stdev": 3.2,
+          "n": 84
+        }
+      }
+    },
+    "narrative": {
+      "correct": {
+        "num_top_functions": {
+          "mean": 0,
+          "stdev": 0.0,
+          "n": 933
+        },
+        "num_all_functions": {
+          "mean": 1.053,
+          "stdev": 0.223,
+          "n": 933
+        },
+        "has_helper_func": {
+          "rate_pct": 100.0,
+          "n": 933
+        },
+        "ast_depth": {
+          "mean": 9.051,
+          "stdev": 1.767,
+          "n": 933
+        },
+        "num_nodes": {
+          "mean": 73.358,
+          "stdev": 37.235,
+          "n": 933
+        },
+        "cyclomatic_proxy": {
+          "mean": 3.012,
+          "stdev": 2.37,
+          "n": 933
+        }
+      },
+      "incorrect": {
+        "num_top_functions": {
+          "mean": 0,
+          "stdev": 0.0,
+          "n": 116
+        },
+        "num_all_functions": {
+          "mean": 1.181,
+          "stdev": 0.409,
+          "n": 116
+        },
+        "has_helper_func": {
+          "rate_pct": 100.0,
+          "n": 116
+        },
+        "ast_depth": {
+          "mean": 9.914,
+          "stdev": 2.007,
+          "n": 116
+        },
+        "num_nodes": {
+          "mean": 100.612,
+          "stdev": 39.616,
+          "n": 116
+        },
+        "cyclomatic_proxy": {
+          "mean": 3.983,
+          "stdev": 2.744,
+          "n": 116
+        }
+      }
+    }
+  },
+  "test6": {
+    "original": {
+      "correct": {
+        "num_top_functions": {
+          "mean": 0.363,
+          "stdev": 0.534,
+          "n": 667
+        },
+        "num_all_functions": {
+          "mean": 0.901,
+          "stdev": 1.0,
+          "n": 667
+        },
+        "has_helper_func": {
+          "rate_pct": 39.7,
+          "n": 667
+        },
+        "ast_depth": {
+          "mean": 9.061,
+          "stdev": 2.27,
+          "n": 667
+        },
+        "num_nodes": {
+          "mean": 174.004,
+          "stdev": 156.108,
+          "n": 667
+        },
+        "cyclomatic_proxy": {
+          "mean": 4.949,
+          "stdev": 4.322,
+          "n": 667
+        }
+      },
+      "incorrect": {
+        "num_top_functions": {
+          "mean": 0.524,
+          "stdev": 0.619,
+          "n": 769
+        },
+        "num_all_functions": {
+          "mean": 1.471,
+          "stdev": 1.041,
+          "n": 769
+        },
+        "has_helper_func": {
+          "rate_pct": 59.4,
+          "n": 769
+        },
+        "ast_depth": {
+          "mean": 11.243,
+          "stdev": 2.057,
+          "n": 769
+        },
+        "num_nodes": {
+          "mean": 357.355,
+          "stdev": 253.865,
+          "n": 769
+        },
+        "cyclomatic_proxy": {
+          "mean": 10.016,
+          "stdev": 8.111,
+          "n": 769
+        }
+      }
+    },
+    "narrative": {
+      "correct": {
+        "num_top_functions": {
+          "mean": 0.429,
+          "stdev": 0.498,
+          "n": 673
+        },
+        "num_all_functions": {
+          "mean": 0.978,
+          "stdev": 0.902,
+          "n": 673
+        },
+        "has_helper_func": {
+          "rate_pct": 39.8,
+          "n": 673
+        },
+        "ast_depth": {
+          "mean": 9.293,
+          "stdev": 2.259,
+          "n": 673
+        },
+        "num_nodes": {
+          "mean": 177.637,
+          "stdev": 162.394,
+          "n": 673
+        },
+        "cyclomatic_proxy": {
+          "mean": 4.994,
+          "stdev": 4.868,
+          "n": 673
+        }
+      },
+      "incorrect": {
+        "num_top_functions": {
+          "mean": 0.615,
+          "stdev": 0.667,
+          "n": 837
+        },
+        "num_all_functions": {
+          "mean": 1.612,
+          "stdev": 1.317,
+          "n": 837
+        },
+        "has_helper_func": {
+          "rate_pct": 60.6,
+          "n": 837
+        },
+        "ast_depth": {
+          "mean": 11.558,
+          "stdev": 1.974,
+          "n": 837
+        },
+        "num_nodes": {
+          "mean": 399.438,
+          "stdev": 309.654,
+          "n": 837
+        },
+        "cyclomatic_proxy": {
+          "mean": 11.354,
+          "stdev": 9.273,
+          "n": 837
+        }
+      }
+    }
+  },
+  "codeforces_merged": {
+    "original": {
+      "correct": {
+        "num_top_functions": {
+          "mean": 1.099,
+          "stdev": 0.553,
+          "n": 870
+        },
+        "num_all_functions": {
+          "mean": 1.82,
+          "stdev": 1.431,
+          "n": 870
+        },
+        "has_helper_func": {
+          "rate_pct": 41.4,
+          "n": 870
+        },
+        "ast_depth": {
+          "mean": 11.033,
+          "stdev": 1.611,
+          "n": 870
+        },
+        "num_nodes": {
+          "mean": 376.276,
+          "stdev": 227.932,
+          "n": 870
+        },
+        "cyclomatic_proxy": {
+          "mean": 9.607,
+          "stdev": 6.103,
+          "n": 870
+        }
+      },
+      "incorrect": {
+        "num_top_functions": {
+          "mean": 1.148,
+          "stdev": 0.857,
+          "n": 1064
+        },
+        "num_all_functions": {
+          "mean": 2.031,
+          "stdev": 1.802,
+          "n": 1064
+        },
+        "has_helper_func": {
+          "rate_pct": 44.2,
+          "n": 1064
+        },
+        "ast_depth": {
+          "mean": 11.206,
+          "stdev": 1.911,
+          "n": 1064
+        },
+        "num_nodes": {
+          "mean": 491.134,
+          "stdev": 337.759,
+          "n": 1064
+        },
+        "cyclomatic_proxy": {
+          "mean": 12.441,
+          "stdev": 9.825,
+          "n": 1064
+        }
+      }
+    },
+    "narrative": {
+      "correct": {
+        "num_top_functions": {
+          "mean": 1.161,
+          "stdev": 0.641,
+          "n": 849
+        },
+        "num_all_functions": {
+          "mean": 2.338,
+          "stdev": 2.349,
+          "n": 849
+        },
+        "has_helper_func": {
+          "rate_pct": 48.6,
+          "n": 849
+        },
+        "ast_depth": {
+          "mean": 11.272,
+          "stdev": 1.572,
+          "n": 849
+        },
+        "num_nodes": {
+          "mean": 441.426,
+          "stdev": 290.527,
+          "n": 849
+        },
+        "cyclomatic_proxy": {
+          "mean": 11.124,
+          "stdev": 7.535,
+          "n": 849
+        }
+      },
+      "incorrect": {
+        "num_top_functions": {
+          "mean": 1.142,
+          "stdev": 0.728,
+          "n": 1089
+        },
+        "num_all_functions": {
+          "mean": 2.228,
+          "stdev": 2.216,
+          "n": 1089
+        },
+        "has_helper_func": {
+          "rate_pct": 44.7,
+          "n": 1089
+        },
+        "ast_depth": {
+          "mean": 11.537,
+          "stdev": 1.856,
+          "n": 1089
+        },
+        "num_nodes": {
+          "mean": 527.343,
+          "stdev": 372.851,
+          "n": 1089
+        },
+        "cyclomatic_proxy": {
+          "mean": 13.228,
+          "stdev": 10.059,
+          "n": 1089
+        }
+      }
+    }
+  }
+}
