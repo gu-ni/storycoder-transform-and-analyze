@@ -4,7 +4,7 @@ import time
 from google import genai
 from google.genai import types
 from google.genai.types import GenerateContentConfigDict
-from instruction_template import INSTRUCTION_THREE_COMPONENTS, INSTRUCTION_THREE_COMPONENTS_ALGORITHM
+from instruction_template import INSTRUCTION_THREE_COMPONENTS, INSTRUCTION_THREE_COMPONENTS_ALGORITHM, INSTRUCTION_THREE_COMPONENTS_ALGORITHM_GIVEN_GENRE, mismatch_genre
 
 
 # 기존 출력 파일에서 이미 처리한 ID 수집
@@ -83,14 +83,19 @@ if __name__ == "__main__":
                             print(f"[Logging] Skipping already processed question_id: {qid}")
                             continue
 
-                        instruction = INSTRUCTION_THREE_COMPONENTS_ALGORITHM
+                        instruction = INSTRUCTION_THREE_COMPONENTS_ALGORITHM_GIVEN_GENRE
+                        genre_index = i % len(mismatch_genre)
+                        genre = mismatch_genre[genre_index]
+                        instruction = instruction.replace("{GENRE}", genre)
                         input_prompt = instruction + problem["question_content"]
 
                         # n번 내러티브 생성
                         narratives = []
+                        
                         for v in range(N_VARIANTS):
                             new_content = call_gemini(model, input_prompt)
                             print(f"\n[Variant {v+1}] ------------------------- Gemini Response -------------------------\n")
+                            print(f"Genre: {genre}\n")
                             print(new_content)
                             print("\n-------------------------------------------------------------------\n")
                             if new_content:
@@ -99,6 +104,7 @@ if __name__ == "__main__":
 
                         # 문제에 n개의 내러티브를 리스트로 저장
                         problem["narratives"] = narratives
+                        problem["genre"] = genre
 
                         outfile.write(json.dumps(problem, ensure_ascii=False) + "\n")
                         existing_ids.add(qid)

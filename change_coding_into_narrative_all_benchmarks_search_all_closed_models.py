@@ -2,7 +2,7 @@ import os
 import json
 import time
 import argparse
-from instruction_template import INSTRUCTION_THREE_COMPONENTS, INSTRUCTION_THREE_COMPONENTS_ALGORITHM
+from instruction_template import INSTRUCTION_THREE_COMPONENTS, INSTRUCTION_THREE_COMPONENTS_ALGORITHM, SOT_INSTRUCTION
 
 # --- API clients import ---
 from google import genai
@@ -119,14 +119,16 @@ if __name__ == "__main__":
 
     # -------- Config --------
     input_jsonl_path_list = [
-        ("/Users/jang-geonhui/Downloads/pil_llm_download/human-eval/data/HumanEval_in_lcb_format_io_filtered.jsonl", "HumanEval", f"humaneval_filtered_narrative_by_{backend}_{option}.jsonl"),
-        # ("/Users/jang-geonhui/Downloads/pil_llm_download/live-code-bench/test6.jsonl", "LiveCodeBench", f"test6_narrative_by_{backend}_{option}.jsonl"),
-        # ("/Users/jang-geonhui/Downloads/pil_llm_download/codeforces/codeforces_in_lcb_format.jsonl", "CodeForces", f"codeforces_narrative_by_gemini_{option}.jsonl"),
-        # ("/Users/jang-geonhui/Downloads/pil_llm_download/codeforces/codeforces_mid_in_lcb_format.jsonl", "CodeForces", f"codeforces_mid_narrative_by_gemini_{option}.jsonl"),
-        # ("/Users/jang-geonhui/Downloads/pil_llm_download/codeforces/codeforces_challenging_in_lcb_format.jsonl", "CodeForces", f"codeforces_challenging_narrative_by_gemini_{option}.jsonl"),
+        ("/home/work/users/PIL_ghj/LLM/datasets/human-eval/data/HumanEval_in_lcb_format_io_filtered.jsonl", "HumanEval", f"humaneval_filtered_narrative_by_{backend}_{option}.jsonl"),
+        ("/home/work/users/PIL_ghj/LLM/datasets/live-code-bench/test6.jsonl", "LiveCodeBench", f"test6_narrative_by_{backend}_{option}.jsonl"),
+        ("/home/work/users/PIL_ghj/LLM/datasets/codeforces/codeforces_in_lcb_format.jsonl", "CodeForces", f"codeforces_narrative_by_{backend}_{option}.jsonl"),
+        # ("/home/work/users/PIL_ghj/LLM/datasets/codeforces/codeforces_mid_in_lcb_format.jsonl", "CodeForces", f"codeforces_mid_narrative_by_{backend}_{option}.jsonl"),
+        ("/home/work/users/PIL_ghj/LLM/datasets/codeforces/codeforces_challenging_in_lcb_format.jsonl", "CodeForces", f"codeforces_challenging_narrative_by_{backend}_{option}.jsonl"),
+        # ("/home/work/users/PIL_ghj/LLM/datasets/codeforces/codeforces_longer_in_lcb_format.jsonl", "CodeForces", f"codeforces_longer_narrative_by_{backend}_{option}.jsonl"),
+        
     ]
 
-    base_output_dir = f"/Users/jang-geonhui/Downloads/pil_llm_download/{backend}_{option}"
+    base_output_dir = f"/home/work/users/PIL_ghj/LLM/datasets/{backend}_{option}"
 
     # -------- Loop over datasets --------
     for input_jsonl_path, output_path_name, file_name in input_jsonl_path_list:
@@ -149,7 +151,7 @@ if __name__ == "__main__":
                             print(f"[Logging] Skipping already processed qid: {qid}")
                             continue
 
-                        instruction = INSTRUCTION_THREE_COMPONENTS_ALGORITHM
+                        instruction = SOT_INSTRUCTION  # INSTRUCTION_THREE_COMPONENTS_ALGORITHM
                         input_prompt = instruction + problem["question_content"]
 
                         narratives = []

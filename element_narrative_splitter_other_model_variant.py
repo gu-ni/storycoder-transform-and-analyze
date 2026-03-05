@@ -38,6 +38,23 @@ def filter_narrative(model_id, text, max_tokens=5120, min_tokens=10):
     return text, num_tokens, "ok"
 
 
+def filter_paraphrase(model_id, text, max_tokens=5120, min_tokens=10):
+    """
+    내러티브 필터링:
+    - max_tokens 도달 → 제외
+    - min_tokens 이하 → 제외
+    """
+    tokenizer = get_tokenizer(model_id)
+    num_tokens = len(tokenizer.encode(text))
+
+    if num_tokens >= max_tokens:
+        return None, num_tokens, "too_long"
+    if num_tokens <= min_tokens:
+        return None, num_tokens, "too_short"
+
+    return text, num_tokens, "ok"
+
+
 
 MODEL_TEMPLATES = {
     "deepseek-ai/deepseek-coder-6.7b-instruct": {
@@ -108,12 +125,14 @@ def remove_algorithm_and_genre(text: str) -> str:
 
 if __name__ == "__main__":
     option = "search_algorithm"   # 또는 "search"
+    mode = "narrative"  # "narrative", "paraphrase"
 
     input_jsonl_path_list = [
-        ("HumanEval", "humaneval_filtered_narrative_by_llm.jsonl"),
-        ("LiveCodeBench", "test6_narrative_by_llm.jsonl"),
-        ("CodeForces", "codeforces_narrative_by_llm.jsonl"),
-        ("CodeForces", "codeforces_challenging_narrative_by_llm.jsonl"),
+        # ("HumanEval", f"humaneval_filtered_{mode}_by_llm.jsonl"),
+        # ("LiveCodeBench", f"test6_{mode}_by_llm.jsonl"),
+        # ("CodeForces", f"codeforces_{mode}_by_llm.jsonl"),
+        # ("CodeForces", f"codeforces_challenging_{mode}_by_llm.jsonl"),
+        ("CodeForces", f"codeforces_longer_{mode}_by_llm.jsonl"),
     ]
 
     for model_id in TARGET_MODEL_IDS:
@@ -124,7 +143,7 @@ if __name__ == "__main__":
 
         for output_path_name, file_name in input_jsonl_path_list:
             input_jsonl_path = os.path.join(base_input_dir, output_path_name, file_name)
-            # base_output_path = input_jsonl_path.replace(".jsonl", "")
+            base_output_path = input_jsonl_path.replace(".jsonl", "")
 
             if not os.path.exists(input_jsonl_path):
                 print(f"[Warning] File not found: {input_jsonl_path}")
@@ -133,49 +152,53 @@ if __name__ == "__main__":
             with open(input_jsonl_path, "r", encoding="utf-8") as infile:
                 problems = [json.loads(line) for line in infile]
 
-            if problems and "narratives" in problems[0]:
-                num_variants = len(problems[0]["narratives"])
+            if problems and f"{mode}s" in problems[0]:
+                num_variants = len(problems[0][f"{mode}s"])
             else:
-                print(f"[Error] No narratives found in {input_jsonl_path}")
+                print(f"[Error] No {mode}s found in {input_jsonl_path}")
                 continue
 
-            print(f"[Logging] Found {len(problems)} problems, each with {num_variants} narratives.")
+            print(f"[Logging] Found {len(problems)} problems, each with {num_variants} {mode}s.")
 
             for variant_idx in range(num_variants):
-                # output_jsonl_path = f"{base_output_path}_narrative_{variant_idx+1}.jsonl"
+                output_jsonl_path = f"{base_output_path}_{mode}_{variant_idx+1}.jsonl"
 
-                # if os.path.exists(output_jsonl_path):
-                #     os.remove(output_jsonl_path)
+                if os.path.exists(output_jsonl_path):
+                    os.remove(output_jsonl_path)
 
                 removed_count = {"too_long": 0, "too_short": 0, "missing_section": 0}
 
-                # with open(output_jsonl_path, "w", encoding="utf-8") as outfile:
-                for problem in problems:
-                    new_problem = dict(problem)
-                    narratives = new_problem.get("narratives", [])
+                with open(output_jsonl_path, "w", encoding="utf-8") as outfile:
+                    for problem in problems:
+                        new_problem = dict(problem)
+                        variants = new_problem.get(f"{mode}s", [])
 
-                    if variant_idx < len(narratives):
-                        content = narratives[variant_idx]
+                        if variant_idx < len(variants):
+                            content = variants[variant_idx]
 
-                        if option == "search_algorithm":
-                            content = remove_algorithm_and_genre(content)
+                            if option == "search_algorithm" and mode == "narrative":
+                                content = remove_algorithm_and_genre(content)
+                                
+                            
+                            if mode == "narrative":
+                                filtered, num_tokens, status = filter_narrative(model_id, content, max_tokens=4055, min_tokens=15)
+                            elif mode == "paraphrase":
+                                filtered, num_tokens, status = filter_paraphrase(model_id, content, max_tokens=4055, min_tokens=15)
+                            if status != "ok":
+                                removed_count[status] += 1
+                                continue  # 이 문제 샘플은 저장 안 함
 
-                        filtered, num_tokens, status = filter_narrative(model_id, content, max_tokens=3000, min_tokens=50)
-                        if status != "ok":
-                            removed_count[status] += 1
-                            continue  # 이 문제 샘플은 저장 안 함
+                            new_problem["question_content"] = filtered
+                        else:
+                            new_problem["question_content"] = ""
 
-                        new_problem["question_content"] = filtered
-                    else:
-                        new_problem["question_content"] = ""
+                        new_problem.pop(f"{mode}s", None)
+                        new_problem.pop("random_combinations", None)
 
-                    new_problem.pop("narratives", None)
-                    new_problem.pop("random_combinations", None)
-
-                        # outfile.write(json.dumps(new_problem, ensure_ascii=False) + "\n")
+                        outfile.write(json.dumps(new_problem, ensure_ascii=False) + "\n")
 
                 print(
-                    # f"\n[Logging] Saved {output_jsonl_path} "
+                    f"\n[Logging] Saved {output_jsonl_path} "
                     f"(removed {removed_count['too_long']} too_long, "
                     f"{removed_count['too_short']} too_short, "
                     f"{removed_count['missing_section']} missing_section)\n"

@@ -251,8 +251,9 @@ INSTRUCTION_CLARIFY = """Please transform the coding problem into a narrative st
 
 
 GEMINI_PARAPHRASE = """Paraphrase the following coding problem while keeping the meaning, constraints, input/output format, and sample cases exactly the same.
-You may rephrase the story or wording, but do not alter anything that changes the solution.
-The paraphrased problem must still produce the same answers as the original.
+You may rephrase the story or wording, but do not alter anything that could change the solution.
+The paraphrased question must still produce the same answers as the original.
+**Do not attempt to solve the problem or provide any code. Your task is only to paraphrase the question as specified.**
 Write only what is requested. The coding problem is as follows:
 
 """
@@ -380,3 +381,14 @@ mismatch_genre = [
     "Gravestone Inscription",
     "Condolence Letter",
 ]
+
+
+SOT_INSTRUCTION = """You will perform two roles.
+
+Role A (Internal Reasoning Only): You are an explorer who wants to identify and collect different related and specialized subject areas to clarify the question. Your goal is to narrow down the question and provide relevant areas of knowledge and experience you have that help clarify the question. Do NOT output anything from this role. Only use the result internally.
+
+Role B (Final Output): You are an expert in narrative-based explanations for science communication. Your goal is to clarify the question in a narrative way through the interconnected information from Role A, to enable a non-expert to comprehend the question in a more coherent and contextually rich manner. Your goal is **only to clarify the question**, not answer it. Make sure to use all of these narrative techniques when clarifying the question through the interconnected information: Progressive Disclosure, Branching, Analogy, Analogical Reasoning, and Metaphor. This is the ONLY role that produces visible output.
+
+Output ONLY the result of Role B. The question is as follows:
+
+"""

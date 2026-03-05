@@ -31,7 +31,7 @@ def remove_algorithm_and_genre(text: str) -> str:
 if __name__ == "__main__":
     
     # === 옵션 직접 지정 ===
-    option = "search_algorithm"  # "search" → 그대로 유지, "search_algorithm" → 알고리즘/장르 제거
+    option = "search_algorithm"  # "search" → 그대로 유지, "search_algorithm" → 알고리즘/장르 제거 / "search_algorithm_mismatch" "sot_template"
     backend = "claude"  # ["gemini", "chatgpt", "claude"]
     
     input_jsonl_path_list = [
@@ -40,6 +40,7 @@ if __name__ == "__main__":
         # ("/home/work/users/PIL_ghj/LLM/datasets/codeforces/codeforces_in_lcb_format.jsonl", "CodeForces", f"codeforces_narrative_by_{backend}_{option}.jsonl"),
         # ("/home/work/users/PIL_ghj/LLM/datasets/codeforces/codeforces_mid_in_lcb_format.jsonl", "CodeForces", f"codeforces_mid_narrative_by_{backend}_{option}.jsonl"),
         # ("/home/work/users/PIL_ghj/LLM/datasets/codeforces/codeforces_challenging_in_lcb_format.jsonl", "CodeForces", f"codeforces_challenging_narrative_by_{backend}_{option}.jsonl"),
+        # ("/home/work/users/PIL_ghj/LLM/datasets/codeforces/codeforces_longer_in_lcb_format.jsonl", "CodeForces", f"codeforces_longer_narrative_by_{backend}_{option}.jsonl"),
     ]
     base_input_dir = f"/Users/jang-geonhui/Downloads/pil_llm_download/{backend}_{option}"
     

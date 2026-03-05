@@ -948,112 +948,108 @@ plot_results(["test6", "codeforces", "codeforces_challenging"], ["A_original", "
 
 
 
-# %%
-# --------------------------
-# 특정 QID 입력
-# --------------------------
-TARGET_QID = "abc387_f"   # ✅ 여기 원하는 QID 넣으세요
+# # %%
+# # --------------------------
+# # 특정 QID 입력
+# # --------------------------
+# TARGET_QID = "abc387_f"   # ✅ 여기 원하는 QID 넣으세요
 
-# 파일 B: gold narratives 확인
-gold_algos = []
-with open(os.path.join(base_dir, B_dir), "r") as f:
-    for line in f:
-        obj = json.loads(line)
-        if obj["question_id"] == TARGET_QID:
-            for n in obj.get("narratives", []):
-                algo = extract_algo_category(n)
-                if algo:
-                    gold_algos.append(algo)
-            break
+# # 파일 B: gold narratives 확인
+# gold_algos = []
+# with open(os.path.join(base_dir, B_dir), "r") as f:
+#     for line in f:
+#         obj = json.loads(line)
+#         if obj["question_id"] == TARGET_QID:
+#             for n in obj.get("narratives", []):
+#                 algo = extract_algo_category(n)
+#                 if algo:
+#                     gold_algos.append(algo)
+#             break
 
-# 파일 A: 해당 QID의 결과 확인
-with open(os.path.join(base_dir, A_dir)) as f:
-    for line in f:
-        obj = json.loads(line)
-        if obj["question_id"] == TARGET_QID:
-            with_io_samples = obj["results"][:5]
-            merge_samples   = obj["results"][5:]
+# # 파일 A: 해당 QID의 결과 확인
+# with open(os.path.join(base_dir, A_dir)) as f:
+#     for line in f:
+#         obj = json.loads(line)
+#         if obj["question_id"] == TARGET_QID:
+#             with_io_samples = obj["results"][:5]
+#             merge_samples   = obj["results"][5:]
 
-            with_io_preds = [extract_core_algorithm(s["analysis"]) for s in with_io_samples]
-            merge_preds   = [extract_core_algorithm(s["analysis"]) for s in merge_samples]
-            break
+#             with_io_preds = [extract_core_algorithm(s["analysis"]) for s in with_io_samples]
+#             merge_preds   = [extract_core_algorithm(s["analysis"]) for s in merge_samples]
+#             break
 
-# --------------------------
-# 표 출력
-# --------------------------
-print(f"\n[QID={TARGET_QID}] 비교 결과")
+# # --------------------------
+# # 표 출력
+# # --------------------------
+# print(f"\n[QID={TARGET_QID}] 비교 결과")
 
-table = []
-for i, algo in enumerate(gold_algos):
-    table.append([f"B_narratives[{i}]", algo, ""])
+# table = []
+# for i, algo in enumerate(gold_algos):
+#     table.append([f"B_narratives[{i}]", algo, ""])
 
-for i, pred in enumerate(with_io_preds):
-    table.append([f"A_with_io[{i}]", "", pred])
+# for i, pred in enumerate(with_io_preds):
+#     table.append([f"A_with_io[{i}]", "", pred])
 
-for i, pred in enumerate(merge_preds):
-    table.append([f"A_merge[{i}]", "", pred])
+# for i, pred in enumerate(merge_preds):
+#     table.append([f"A_merge[{i}]", "", pred])
 
-print(tabulate(table, headers=["Source", "B (Gold Algorithm Category)", "A (Core Algorithm)"], tablefmt="grid"))
-# %%
-# %%
-import os
-import json
-import re
+# print(tabulate(table, headers=["Source", "B (Gold Algorithm Category)", "A (Core Algorithm)"], tablefmt="grid"))
+# # %%
+# # %%
+# import os
+# import json
+# import re
 
-base_dir = "/home/work/users/PIL_ghj/LLM"
-A_dir = "code/LiveCodeBench/algorithm_analysis/algorithm_analysis_narrative_gemini.jsonl"
-B_dir = "datasets/gemini_search_algorithm/LiveCodeBench/test6_narrative_by_gemini_search_algorithm.jsonl"
+# base_dir = "/home/work/users/PIL_ghj/LLM"
+# A_dir = "code/LiveCodeBench/algorithm_analysis/algorithm_analysis_narrative_gemini.jsonl"
+# B_dir = "datasets/gemini_search_algorithm/LiveCodeBench/test6_narrative_by_gemini_search_algorithm.jsonl"
 
-# ---------- 추출 함수 ----------
-def extract_core_algorithm(text):
-    if not text:
-        return ""
-    m = re.search(r"Core Algorithm:\s*(.+)", text)
-    return m.group(1).strip() if m else ""
+# # ---------- 추출 함수 ----------
+# def extract_core_algorithm(text):
+#     if not text:
+#         return ""
+#     m = re.search(r"Core Algorithm:\s*(.+)", text)
+#     return m.group(1).strip() if m else ""
 
-def extract_algo_category(text):
-    m = re.search(r"Algorithm Category:\s*(.+)", text)
-    return m.group(1).strip() if m else ""
+# def extract_algo_category(text):
+#     m = re.search(r"Algorithm Category:\s*(.+)", text)
+#     return m.group(1).strip() if m else ""
 
-# ---------- 파일 B: gold ----------
-qid_to_B_algos = {}
-with open(os.path.join(base_dir, B_dir), "r") as f:
-    for line in f:
-        obj = json.loads(line)
-        qid = obj["question_id"]
-        algos = []
-        for n in obj.get("narratives", []):
-            algo = extract_algo_category(n)
-            if algo:
-                algos.append(algo)
-        qid_to_B_algos[qid] = algos
+# # ---------- 파일 B: gold ----------
+# qid_to_B_algos = {}
+# with open(os.path.join(base_dir, B_dir), "r") as f:
+#     for line in f:
+#         obj = json.loads(line)
+#         qid = obj["question_id"]
+#         algos = []
+#         for n in obj.get("narratives", []):
+#             algo = extract_algo_category(n)
+#             if algo:
+#                 algos.append(algo)
+#         qid_to_B_algos[qid] = algos
 
-# ---------- 파일 A: pred ----------
-qid_to_A_algos = {}
-with open(os.path.join(base_dir, A_dir), "r") as f:
-    for line in f:
-        obj = json.loads(line)
-        qid = obj["question_id"]
-        algos = []
-        for s in obj.get("results", []):
-            algo = extract_core_algorithm(s["analysis"])
-            if algo:
-                algos.append(algo)
-        qid_to_A_algos[qid] = algos
+# # ---------- 파일 A: pred ----------
+# qid_to_A_algos = {}
+# with open(os.path.join(base_dir, A_dir), "r") as f:
+#     for line in f:
+#         obj = json.loads(line)
+#         qid = obj["question_id"]
+#         algos = []
+#         for s in obj.get("results", []):
+#             algo = extract_core_algorithm(s["analysis"])
+#             if algo:
+#                 algos.append(algo)
+#         qid_to_A_algos[qid] = algos
 
-# ---------- JSON 저장 ----------
-out_dir = os.path.join(base_dir, "code/LiveCodeBench/algorithm_analysis/algorithm_extraction_lists")
-os.makedirs(out_dir, exist_ok=True)
+# # ---------- JSON 저장 ----------
+# out_dir = os.path.join(base_dir, "code/LiveCodeBench/algorithm_analysis/algorithm_extraction_lists")
+# os.makedirs(out_dir, exist_ok=True)
 
-with open(os.path.join(out_dir, "A_extracted_algos.json"), "w", encoding="utf-8") as f:
-    json.dump(qid_to_A_algos, f, indent=2, ensure_ascii=False)
+# with open(os.path.join(out_dir, "A_extracted_algos.json"), "w", encoding="utf-8") as f:
+#     json.dump(qid_to_A_algos, f, indent=2, ensure_ascii=False)
 
-with open(os.path.join(out_dir, "B_extracted_algos.json"), "w", encoding="utf-8") as f:
-    json.dump(qid_to_B_algos, f, indent=2, ensure_ascii=False)
+# with open(os.path.join(out_dir, "B_extracted_algos.json"), "w", encoding="utf-8") as f:
+#     json.dump(qid_to_B_algos, f, indent=2, ensure_ascii=False)
 
-print(f"[Done] Saved A_extracted_algos.json and B_extracted_algos.json in {out_dir}")
-# %%
-
-import os
-
-os.getcwd()
+# print(f"[Done] Saved A_extracted_algos.json and B_extracted_algos.json in {out_dir}")
+# # %%

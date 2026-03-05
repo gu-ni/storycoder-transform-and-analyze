@@ -1,21 +1,22 @@
 MODEL_IDS=(
-    "deepseek-ai/deepseek-coder-6.7b-instruct"
-    "deepseek-ai/DeepSeek-Coder-V2-Lite-Instruct"
-    "bigcode/starcoder2-15b"
-    "meta-llama/Meta-Llama-3.1-8B-Instruct"
-    "google/gemma-2-9b-it"
+    # "meta-llama/Meta-Llama-3.1-8B-Instruct"
+    # "deepseek-ai/DeepSeek-V2-Lite-Chat"
+    # "google/gemma-2-9b-it"
     "google/gemma-2-27b-it"
-    "Qwen/Qwen2.5-Coder-7B-Instruct"
-    "Qwen/Qwen2.5-Coder-32B-Instruct"
+    # "Qwen/Qwen2.5-7B-Instruct"
+    "Qwen/Qwen2.5-32B-Instruct"
     "mistralai/Mistral-Small-24B-Instruct-2501"
 )
 
 for MODEL_ID in "${MODEL_IDS[@]}"
 do
     echo "==================== Running for: $MODEL_ID ===================="
-    python change_coding_into_narrative_other_model.py \
+    python change_coding_into_narrative_other_model_variant.py \
         --model_id "$MODEL_ID" \
-        --batch_size 32
+        --batch_size 8 \
+        --max_tokens 4096 \
+        --num_samples 5 \
+        --mode "narrative"
     echo "===============================================================\n"
 done
 
